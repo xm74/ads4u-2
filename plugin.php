@@ -7,7 +7,7 @@ class pluginAds4U extends Plugin {
         private function ads4u()
         {
                 $ret  = '<!-- Ads4U BEGIN -->'.PHP_EOL;
-                $ret .= Sanitize::htmlDecode($this->getDbField('ads4uCode')).PHP_EOL;
+                $ret .= '	'.Sanitize::htmlDecode($this->getDbField('ads4uCode')).PHP_EOL;
                 $ret .= '<!-- Ads4U END -->'.PHP_EOL;
 
                 return $ret;
