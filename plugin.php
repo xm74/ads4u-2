@@ -27,24 +27,24 @@ class pluginAds4U extends Plugin {
                 global $Language;
 
                 $html  = '<div>';
-                $html .= '<label>'.$Language->get('enable-ads4u-on-pages').'</label>';
-                $html .= '<select name="enablePages">';
+                $html .= '<label for="ads4uenablepages">'.$Language->get('enable-ads4u-on-pages').'</label>';
+                $html .= '<select id="ads4uenablepages" name="enablePages">';
                 $html .= '<option value="true" '.($this->getValue('enablePages')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
                 $html .= '<option value="false" '.($this->getValue('enablePages')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
                 $html .= '</select>';
                 $html .= '</div>';
 
                 $html .= '<div>';
-                $html .= '<label>'.$Language->get('enable-ads4u-on-posts').'</label>';
-                $html .= '<select name="enablePosts">';
+                $html .= '<label for="ads4uenableposts">'.$Language->get('enable-ads4u-on-posts').'</label>';
+                $html .= '<select id="ads4uenableposts" name="enablePosts">';
                 $html .= '<option value="true" '.($this->getValue('enablePosts')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
                 $html .= '<option value="false" '.($this->getValue('enablePosts')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
                 $html .= '</select>';
                 $html .= '</div>';
 
                 $html .= '<div>';
-                $html .= '<label>'.$Language->get('ads4u-html-code').'</label>';
-                $html .= '<textarea id="jsads4uCode" type="text" name="ads4uCode">'.$this->getDbField('ads4uCode').'</textarea>';
+                $html .= '<label for="ads4ucode">'.$Language->get('ads4u-html-code').'</label>';
+                $html .= '<textarea id="ads4ucode" type="text" name="ads4uCode">'.$this->getDbField('ads4uCode').'</textarea>';
                 $html .= '<span class="tip">'.$Language->get('complete-this-field-with-html-code').'</span>';
                 $html .= '</div>';
 
